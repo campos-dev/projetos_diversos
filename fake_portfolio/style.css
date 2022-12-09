@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.05rem;
+}
+
+:root {
+  --brand-light: hsl(0, 100%, 99%);
+  --brand-lighter-color: hsl(0, 95%, 55%);
+  --brand-lightest-color: hsl(0, 80%, 92%);
+  --brand-darkest: hsl(0, 0%, 11%);
+
+  --handwriting: "Kalam", cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#navbar {
+  width: 100%;
+  background-color: var(--brand-darkest);
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+}
+
+#navbar a {
+  display: block;
+  font-size: 0.9rem;
+  padding: 1.5rem 1rem;
+  text-decoration: none;
+  color: var(--brand-lighter-color);
+  transition: color 0.3s ease-out;
+}
+
+#navbar a:last-child {
+  margin-right: 2rem;
+}
+
+#navbar a:hover {
+  background-color: var(--brand-light);
+}
+
+#welcome-section {
+  background-color: var(--brand-darkest);
+  padding-top: 4.5rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#welcome-section h1 {
+  font-family: var(--handwriting);
+  color: white;
+  margin-bottom: 0;
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.8rem;
+}
+
+#welcome-section h1 span:first-child {
+  font-family: var(--handwriting);
+  display: block;
+  font-size: 1.9rem;
+  color: var(--brand-lighter-color);
+  margin: 0;
+  padding: 0;
+}
+
+#welcome-section h1 span:last-child {
+  font-size: 3rem;
+}
+
+#welcome-section h3 {
+  font-family: var(--handwriting);
+  color: white;
+  margin-top: 0rem;
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: var(--brand-lighter-color);
+}
+
+#projects {
+  padding-top: 6rem;
+  background-color: var(--brand-light);
+}
+
+#projects h2 {
+  display: block;
+  margin: 0 auto;
+  font-size: 1rem;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  color: white;
+  background-color: var(--brand-darkest);
+  width: 20%;
+  text-align: center;
+}
+
+.portfolio img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  object-position: 50% 30%;
+}
+
+.imageLink {
+  background-color: var(--brand-darkest);
+  width: 28%;
+  margin: 4rem 0;
+}
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.imageLink .project-title {
+  color: white;
+  font-size: 0.8rem;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageLink a {
+  text-decoration: none;
+}
+
+.imageLink:hover .code {
+  color: var(--brand-lighter-color);
+}
+
+.code {
+  color: var(--brand-darkest);
+  transition: color 0.3s ease-out;
+}
+
+button {
+  background-color: var(--brand-darkest);
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  border: none;
+  margin-bottom: 4rem;
+  transition: 0.5s ease-out;
+}
+
+button:hover {
+  background-color: black;
+  transition: background-color 0.2s ease-out;
+}
+
+button span {
+  right: 0;
+  transition: 0.5s ease-out;
+}
+
+button:hover span {
+  color: var(--brand-lighter-color);
+  position: relative;
+  right: -0.2rem;
+  transition: right 0.5s ease-out, color 0.2s ease-out;
+}
+
+.showAll {
+  text-align: center;
+}
+
+section#contact {
+  background-color: var(--brand-darkest);
+  padding: 8rem 0;
+}
+
+section#contact h1 {
+  margin: 0;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+}
+
+section#contact h3 {
+  margin: 0.5rem 0;
+  text-align: center;
+  color: var(--brand-lighter-color);
+  font-family: var(--handwriting);
+  font-size: 1.2rem;
+  font-weight: 100;
+  margin-bottom: 4rem;
+}
+
+.socialMedia {
+  margin: 0;
+  margin: 0 10%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+section#contact a {
+  color: white;
+  border-radius: 2px;
+  text-decoration: none;
+  padding-right: 1rem;
+  font-size: 0.8rem;
+  transition: all 0.2s ease-out;
+}
+
+section#contact a:hover {
+  transform: translateY(8px);
+  margin: 0;
+  color: var(--brand-lighter-color);
+  transition: all 0.2s ease-out;
+}
+
+.freeCodeCampLink {
+  display: flex;
+  align-items: center;
+}
+
+footer {
+  margin: 0;
+  padding: 2.5rem 0;
+  border-top: var(--brand-lightest-color) 1px solid;
+  background-color: var(--brand-darkest);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+}
+
+footer p {
+  font-size: 0.8rem;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 1090px) {
+  .imageLink {
+    width: 40%;
+  }
+
+  .portfolio img {
+    object-position: 50% 0;
+  }
+
+  section#contact a {
+    margin-bottom: 0.5rem;
+  }
+
+  .socialMedia {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .freeCodeCampLink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer p,
+  footer a {
+    display: block;
+    width: 100%;
+    margin: 0 2rem;
+  }
+}
+
+@media (max-width: 730px) {
+  .imageLink {
+    width: 90%;
+  }
+}
